@@ -1,5 +1,73 @@
 package ClienteEcoembes.dto;
 
-public class AsignacionDTO {
+import java.time.LocalDate;
+import java.util.List;
 
+public class AsignacionDTO {
+	private String asignacionID;
+    private String plantaID;
+    private LocalDate fechaPrevista;
+    private List<String> listaContenedores;
+    private int totalEnvasesEstimados;
+    private String asignador;
+    private boolean notificacion;
+
+    public AsignacionDTO() {
+    }
+
+    public String getAsignacionID() {
+        return asignacionID;
+    }
+
+    public void setAsignacionID(String asignacionID) {
+        this.asignacionID = asignacionID;
+    }
+
+    public String getPlantaID() {
+        return plantaID;
+    }
+
+    public void setPlantaID(String plantaID) {
+        this.plantaID = plantaID;
+    }
+
+    public LocalDate getFechaPrevista() {
+        return fechaPrevista;
+    }
+
+    public void setFechaPrevista(LocalDate fechaPrevista) {
+        this.fechaPrevista = fechaPrevista;
+    }
+
+    public List<String> getListaContenedores() {
+        return listaContenedores;
+    }
+
+    public void setListaContenedores(List<String> listaContenedores) {
+        this.listaContenedores = listaContenedores;
+    }
+
+    public int getTotalEnvasesEstimados() {
+        return totalEnvasesEstimados;
+    }
+
+    public void setTotalEnvasesEstimados(int totalEnvasesEstimados) {
+        this.totalEnvasesEstimados = totalEnvasesEstimados;
+    }
+
+    public String getAsignador() {
+        return asignador;
+    }
+
+    public void setAsignador(String asignador) {
+        this.asignador = asignador;
+    }
+
+    public boolean isNotificacion() {
+        return notificacion;
+    }
+
+    public void setNotificacion(boolean notificacion) {
+        this.notificacion = notificacion;
+    }
 }
