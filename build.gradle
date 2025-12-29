@@ -1,8 +1,8 @@
 plugins {
 	id 'java'
 	id 'application'
-	//id 'org.springframework.boot' version '3.5.8'
-	//id 'io.spring.dependency-management' version '1.1.7'
+	id 'org.springframework.boot' version '3.5.8'
+	id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.deusto'
@@ -21,12 +21,14 @@ repositories {
 
 dependencies {
 	//implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	//implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation ('org.springframework.boot:spring-boot-starter-web') {
+		// EXCLUIMOS Tomcat para que no arranque como servidor web
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+	}
 	//testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	implementation 'org.springframework:spring-web:6.1.10' 
-	implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0' // JACKSON para conversiones JSON <-> Objeto
-	implementation 'ch.qos.logback:logback-classic:1.5.6'
+	implementation 'com.fasterxml.jackson.core:jackson-databind' // JACKSON para conversiones JSON <-> Objeto
+	implementation 'ch.qos.logback:logback-classic'
 }
 
 tasks.named('test') {
@@ -34,5 +36,5 @@ tasks.named('test') {
 }
 
 application {
-	ClienteEcoembesApplication = 'ClienteEcoembes.ClienteEcoembesApplication'
+	mainClass = 'com.deusto.ClienteEcoembes.ClienteEcoembesApplication'
 }

@@ -1,4 +1,4 @@
-package com.deusto.contsocket;
+package com.deusto;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
