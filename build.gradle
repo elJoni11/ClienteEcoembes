@@ -28,7 +28,7 @@ dependencies {
 	//testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'com.fasterxml.jackson.core:jackson-databind' // JACKSON para conversiones JSON <-> Objeto
-	implementation 'ch.qos.logback:logback-classic'
+	implementation 'ch.qos.logback:logback-classic' // Logging para evitar errores de arranque
 }
 
 tasks.named('test') {
